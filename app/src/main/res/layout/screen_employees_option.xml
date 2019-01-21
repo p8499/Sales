@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/options_row">
+
+    <TextView
+        android:id="@+id/label"
+        style="@style/options_row_label"
+        android:text="xxx" />
+
+    <ImageView
+        style="@style/options_row_icon"
+        android:contentDescription="Close"
+        android:src="@drawable/ic_close_grey_24dp" />
+</LinearLayout>

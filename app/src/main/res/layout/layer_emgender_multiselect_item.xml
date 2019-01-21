@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/popup_selection_row">
+
+    <ImageView
+        style="@style/popup_selection_row_icon"
+        android:contentDescription="Selector" />
+
+    <TextView
+        android:id="@+id/item"
+        style="@style/popup_selection_row_text"
+        android:text="Item" />
+</LinearLayout>

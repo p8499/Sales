@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/lce"
+    android:transitionName="employee">
+
+    <ProgressBar
+        android:id="@+id/loading"
+        style="@style/lce_loading" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        style="@style/lce_refresh">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            style="@style/lce_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:contentScrim="#00000000"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+                    <test.sales.common.SquareFrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:layout_collapseMode="parallax">
+
+                        <ImageView
+                            android:id="@+id/portrait"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="Portrait"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_portrait_grey_320dp" />
+                    </test.sales.common.SquareFrameLayout>
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        app:layout_collapseMode="pin" />
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        style="@style/form_group"
+                        android:layout_marginTop="32dp">
+
+                        <LinearLayout style="@style/form_group_row">
+
+                            <TextView
+                                style="@style/form_group_row_label"
+                                android:text="Status" />
+
+                            <Switch
+                                android:id="@+id/emstatus"
+                                style="@style/form_group_row_switch" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/form_group"
+                        android:layout_marginTop="32dp">
+
+                        <LinearLayout style="@style/form_group_row">
+
+                            <TextView
+                                style="@style/form_group_row_label"
+                                android:text="ID" />
+
+                            <!--dummy=0-->
+                            <EditText
+                                android:id="@+id/emid"
+                                style="@style/form_group_row_edittext"
+                                android:hint="Input ID"
+                                android:inputType="numberSigned"
+                                android:text="" />
+                        </LinearLayout>
+
+                        <View style="@style/form_group_dividor" />
+
+                        <LinearLayout style="@style/form_group_row">
+
+                            <TextView
+                                style="@style/form_group_row_label"
+                                android:text="Name" />
+
+                            <EditText
+                                android:id="@+id/emname"
+                                style="@style/form_group_row_edittext"
+                                android:hint="Input Name"
+                                android:text="" />
+                        </LinearLayout>
+
+                        <View style="@style/form_group_dividor" />
+
+                        <LinearLayout
+                            android:id="@+id/emgender_area"
+                            style="@style/form_group_row"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <TextView
+                                style="@style/form_group_row_label"
+                                android:text="Gender" />
+
+                            <TextView
+                                android:id="@+id/emgender"
+                                style="@style/form_group_row_textview"
+                                android:layout_marginEnd="8dp"
+                                android:hint="Select Gender"
+                                android:text="" />
+
+                            <ImageView
+                                style="@style/form_group_row_indictor"
+                                android:contentDescription="Indictor" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/error"
+        style="@style/lce_error"
+        android:drawableTop="@drawable/ic_error_grey_32dp"
+        android:text="Error" />
+</FrameLayout>

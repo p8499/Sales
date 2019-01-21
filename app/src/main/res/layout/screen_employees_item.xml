@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/employee_row">
+
+    <ImageView
+        android:id="@+id/portrait"
+        style="@style/employee_row_portrait"
+        android:contentDescription="Portrait" />
+
+    <LinearLayout style="@style/employee_row_content">
+
+        <ImageView
+            android:id="@+id/emgender"
+            style="@style/employee_row_content_emgender"
+            android:contentDescription="Gender" />
+
+        <TextView
+            android:id="@+id/emid"
+            style="@style/employee_row_content_emid"
+            android:text="9999" />
+
+        <TextView
+            android:id="@+id/emname"
+            style="@style/employee_row_content_emname"
+            android:text="Name" />
+
+        <TextView
+            android:id="@+id/emamount"
+            style="@style/employee_row_content_emamount"
+            android:text="9999.99" />
+    </LinearLayout>
+</LinearLayout>

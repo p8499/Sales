@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Light">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentScrim="#00000000"
+                app:layout_scrollFlags="scroll|enterAlways|snap">
+
+                <LinearLayout
+                    android:id="@+id/toolbar"
+                    style="@style/bar">
+
+                    <androidx.appcompat.widget.SearchView
+                        android:id="@+id/search"
+                        style="@style/search"
+                        app:queryHint="Please input key word" />
+
+                    <LinearLayout style="@style/indicator_bar">
+
+                        <FrameLayout
+                            android:id="@+id/status_area"
+                            style="@style/indicator_bar_region">
+
+                            <TextView
+                                android:id="@+id/status"
+                                style="@style/indicator_bar_region_text"
+                                android:text="Status" />
+
+                            <ImageView
+                                style="@style/indicator_bar_region_icon"
+                                android:contentDescription="Drop Down" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/gender_area"
+                            style="@style/indicator_bar_region">
+
+                            <TextView
+                                android:id="@+id/gender"
+                                style="@style/indicator_bar_region_text"
+                                android:text="Gender" />
+
+                            <ImageView
+                                style="@style/indicator_bar_region_icon"
+                                android:contentDescription="Drop Down" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/sort_area"
+                            style="@style/indicator_bar_region">
+
+                            <TextView
+                                android:id="@+id/sort"
+                                style="@style/indicator_bar_region_text"
+                                android:text="Sort" />
+
+                            <ImageView
+                                style="@style/indicator_bar_region_icon"
+                                android:contentDescription="Drop Down" />
+                        </FrameLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <FrameLayout style="@style/options">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/options"
+                        style="@style/options_recycler" />
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/list"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <ProgressBar
+                        android:id="@+id/loading"
+                        style="@style/lce_loading" />
+
+                    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                        android:id="@+id/refresh"
+                        style="@style/lce_refresh">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/items"
+                            style="@style/lce_content" />
+                    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+                    <TextView
+                        android:id="@+id/error"
+                        style="@style/lce_error"
+                        android:drawableTop="@drawable/ic_error_grey_32dp"
+                        android:text="Error" />
+                </FrameLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <RelativeLayout
+        android:id="@+id/action"
+        style="@style/action">
+
+        <TextView
+            android:id="@+id/hint"
+            style="@style/action_hint"
+            android:text="999 items selected" />
+
+        <Button
+            android:id="@+id/cancel"
+            style="@style/action_cancel"
+            android:text="Cancel" />
+
+        <Button
+            android:id="@+id/delete"
+            style="@style/action_ok"
+            android:layout_toStartOf="@+id/cancel"
+            android:text="Delete" />
+    </RelativeLayout>
+</LinearLayout>

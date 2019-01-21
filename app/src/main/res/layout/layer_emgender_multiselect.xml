@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/popup_selection">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/items"
+        style="@style/popup_selection_recycler" />
+
+    <Button
+        android:id="@+id/ok"
+        style="@style/popup_selection_ok"
+        android:text="OK" />
+</LinearLayout>

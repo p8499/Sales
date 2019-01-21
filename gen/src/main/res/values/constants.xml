@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<integer name="Employee_Emid_Length_Integer">4</integer>
+	<integer name="Employee_Emid_Min">-10000</integer>
+	<integer name="Employee_Emid_Max">10000</integer>
+	<integer name="Employee_Emstatus_Length_Integer">1</integer>
+	<integer name="Employee_Emstatus_Min">-10</integer>
+	<integer name="Employee_Emstatus_Max">10</integer>
+	<integer name="Employee_Emgender_Length_String">1</integer>
+	<integer name="Employee_Emname_Length_String">64</integer>
+	<integer name="Employee_Emamount_Length_Integer">0</integer>
+	<integer name="Employee_Emamount_Length_Fraction">0</integer>
+	<integer name="Product_Imid_Length_Integer">8</integer>
+	<integer name="Product_Imid_Min">-100000000</integer>
+	<integer name="Product_Imid_Max">100000000</integer>
+	<integer name="Product_Imname_Length_String">64</integer>
+	<integer name="Product_Imprice_Length_Integer">6</integer>
+	<integer name="Product_Imprice_Length_Fraction">2</integer>
+	<integer name="Product_Imamount_Length_Integer">0</integer>
+	<integer name="Product_Imamount_Length_Fraction">0</integer>
+	<integer name="Record_Reid_Length_Integer">8</integer>
+	<integer name="Record_Reid_Min">-100000000</integer>
+	<integer name="Record_Reid_Max">100000000</integer>
+	<integer name="Record_Reimid_Length_Integer">8</integer>
+	<integer name="Record_Reimid_Min">-100000000</integer>
+	<integer name="Record_Reimid_Max">100000000</integer>
+	<integer name="Record_Reemid_Length_Integer">4</integer>
+	<integer name="Record_Reemid_Min">-10000</integer>
+	<integer name="Record_Reemid_Max">10000</integer>
+	<integer name="Record_Reqty_Length_Integer">4</integer>
+	<integer name="Record_Reqty_Min">-10000</integer>
+	<integer name="Record_Reqty_Max">10000</integer>
+</resources>

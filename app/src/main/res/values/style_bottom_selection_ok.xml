@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="bottom_selection_ok">
+        <item name="android:layout_height">32dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:textColor">@color/bottom_selection_ok_tc</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@drawable/bottom_selection_ok_bg</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+    </style>
+</resources>

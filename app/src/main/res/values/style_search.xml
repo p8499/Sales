@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="search">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">#fff5f5f5</item>
+        <item name="queryBackground">@drawable/search_qb</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="searchIcon">@null</item>
+        <item name="iconifiedByDefault">false</item>
+    </style>
+</resources>
